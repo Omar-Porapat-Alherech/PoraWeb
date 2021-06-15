@@ -2,6 +2,10 @@ import React from "react";
 import {colors} from './res/values/colors'
 import PropTypes from "prop-types";
 import Draggable from 'react-draggable';
+// import Typewriter from 'typewriter-effect/dist/core';
+// import Typewriter from 'typewriter-effect';
+import Typing from 'react-typing-animation';
+import ErrorMessage from './textcomponents/Intro'
 
 
 
@@ -73,15 +77,16 @@ class Terminal extends React.Component {
         var terminal = {
             width: 700,
             height: 300,
-            borderRadius: 15,
+            borderRadius: 7,
             background: colors.material_blue_grey_900,
             boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2)"
         }
         var topbar = {
             width: 700,
-            background: '#f2bcf8',
-            borderTopLeftRadius: 14,
-            borderTopRightRadius: 14,
+            // '#f2bcf8'
+            background: colors.material_blue_grey_900,
+            borderTopLeftRadius: 6,
+            borderTopRightRadius: 6,
             height : 35,
             // boxShadow: "0px 0px 5px #666",
             //    This line will cause this weird line to appear if the top bar and bottom are the same color
@@ -96,6 +101,19 @@ class Terminal extends React.Component {
                         <UtilityButton color={colors.material_yellow}/>
                         <UtilityButton color={colors.material_green}/>
                 </div>
+                {/*<div>*/}
+                {/*    <Typewriter*/}
+                {/*        onInit={(typewriter) => {*/}
+                {/*            typewriter.typeString(ErrorMessage)*/}
+                {/*                .pauseFor(2500)*/}
+                {/*                .start();*/}
+                {/*        }}*/}
+                {/*    />*/}
+                {/*</div>*/}
+                <Typing>
+                    <span>This span will get typed.</span>
+                </Typing>
+
             </div>
             </Draggable>
         )
