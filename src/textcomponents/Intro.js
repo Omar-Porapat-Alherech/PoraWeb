@@ -1,16 +1,20 @@
 import React from "react";
+import Typing from 'react-typing-animation';
 
 var stringstyle = {
     fontFamily: 'Fira Mono',
-    fontSize: 50,
+    fontSize: 25,
     color: '#ffffff'
 }
 // const ErrorMessage = '<strong>' +
 //     'only <l style={stringstyle}>5kb</l> Gzipped!</strong>'
-const ErrorMessage = (props) => {
+
+function ErrorMessage() {
     return (
-        <span style={stringstyle}>This span will get typed.</span>
+        <Typing>
+            <span style={stringstyle}>This span will get typed.</span>
+        </Typing>
     );
-};
+}
 
 export default ErrorMessage;

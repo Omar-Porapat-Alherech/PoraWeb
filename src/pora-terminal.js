@@ -110,9 +110,7 @@ class Terminal extends React.Component {
                 {/*        }}*/}
                 {/*    />*/}
                 {/*</div>*/}
-                <Typing>
-                    <span>This span will get typed.</span>
-                </Typing>
+                    {ErrorMessage()}
 
             </div>
             </Draggable>
